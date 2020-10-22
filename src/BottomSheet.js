@@ -1,16 +1,17 @@
+import {TouchableHighlight} from '@gorhom/bottom-sheet';
 import React, {useContext} from 'react';
-import {Button} from 'react-native';
+import {Text} from 'react-native';
 import {Context} from './Context';
 
 const BottomSheet = () => {
   const {setCount} = useContext(Context);
   return (
-    <Button
-      title="add"
+    <TouchableHighlight
       onPress={() => {
         setCount((count) => count + 1);
-      }}
-    />
+      }}>
+      <Text>add</Text>
+    </TouchableHighlight>
   );
 };
 
